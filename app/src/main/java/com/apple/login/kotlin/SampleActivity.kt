@@ -99,7 +99,7 @@ class SampleActivity : AppCompatActivity() {
                         if(userParam != null)
                             Log.d(TAG, userParam)
                         if(idTokenParam != null)
-                            Log.d(TAG, jwtDecoded(idTokenParam))
+                            jwtDecoded(idTokenParam)?.let { Log.d(TAG, it) }
 
                         Toast.makeText(applicationContext, "로그인 성공", Toast.LENGTH_SHORT).show()
                         finish()
